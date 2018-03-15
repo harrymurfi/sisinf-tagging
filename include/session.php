@@ -3,7 +3,7 @@
 
   function session_check()
   {
-    if(!isset($_SESSION['pid']))
+    if(!isset($_SESSION['username']))
     {
       header('location: login.php');
       die();
@@ -18,9 +18,8 @@
     $_SESSION['current_village'] = $vid;
   }
 
-  function set_session($pid, $username)
+  function set_session($username)
   {
-    $_SESSION['pid'] = $pid;
     $_SESSION['username'] = $username;
   }
 ?>
